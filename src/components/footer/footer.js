@@ -7,7 +7,7 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="row border m-0 p-0 h-100 align-items-center">
-                <div className="col-2 border text-center">
+                <div className="col-2 border text-center h-100">
                     <ProductSticker />
                 </div>
                 <div className="col-8 border text-center">
@@ -46,7 +46,7 @@ export default class Footer extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-2 border text-center">
+                <div className="col-2 border text-center h-100">
                     <Inventory />
                 </div>
             </div>

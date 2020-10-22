@@ -8,7 +8,7 @@ export default class Cell extends Component {
 
     render() {
         return (
-            <div className="btn btn-outline-secondary" style={{minHeight: "65px", minWidth: "65px"}} disabled>{this.props.num}</div>
+            <div className="btn btn-outline-secondary" style={{minHeight: "90px", minWidth: "90px", fontSize: "3vw"}} disabled>{this.props.num}</div>
         )
     }
 }
