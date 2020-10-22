@@ -31,7 +31,7 @@ export default class header extends Component {
                 </div>
                 <div className="col-3">
                     <div className="row border h-100 align-items-center">
-                        <div className="col p-1">
+                        <div className="col h-100">
                             <ExitOrCancel />
                         </div>
                     </div>
