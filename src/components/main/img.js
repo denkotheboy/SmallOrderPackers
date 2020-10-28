@@ -34,9 +34,9 @@ export default class img extends Component {
 
     render() {
         return (
-            <div className="row border h-100 align-items-center">
-                <div className="col border">
-                    <img src={this.state.img} style={{width: "75%"}} className="img-thumbnail rounded mx-auto d-block" alt="..." />
+            <div className="row h-100 align-items-center">
+                <div className="co">
+                    <img src={this.state.img} style={{width: "75%"}} className="img-thumbnail rounded mx-auto d-block border-dark" alt="..." />
                 </div>
             </div>
         )

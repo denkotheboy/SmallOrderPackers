@@ -42,7 +42,7 @@ export default class App extends Component {
 
     if (this.header !== null && this.main !== null && this.footer !== null){
       this.setState({
-        style: { height: window.innerHeight - this.header.clientHeight - this.footer.clientHeight }
+        style: { height: Number(window.innerHeight - this.header.clientHeight - this.footer.clientHeight) - 10 }
       });
     }
 
@@ -52,7 +52,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <div className="container-fluid">
-          <div className="row header" id="header">
+          <div className="row border-bottom border-dark header" id="header">
             <div className="col m-0 p-0">
               <Header />
             </div>
@@ -62,7 +62,7 @@ export default class App extends Component {
               <Main />
             </div>
           </div>
-          <div className="row" id="footer">
+          <div className="row border-top border-dark" id="footer">
             <div className="col m-0 p-0">
               <Footer />
             </div>

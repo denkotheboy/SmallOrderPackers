@@ -21,9 +21,15 @@ class Bid extends Component {
 
     render() {
         return (
-            <span>
-                № заявки/Ячейка
-            </span>
+          <div className="row align-items-center">
+              <div className="col text-center">
+                  <div className="row justify-content-center">
+                      <div className="col-8 border border-dark rounded p-2 m-1">
+                        № заявки/Ячейка
+                      </div>
+                  </div>
+              </div>
+          </div>
         )
     }
 }

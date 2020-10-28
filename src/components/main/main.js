@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Img from "./img"
+import "../../style/main.css"
+import ProductInfo from "./productArea/productInformation"
 
 export default class Main extends Component {
     constructor(props){
@@ -12,12 +14,12 @@ export default class Main extends Component {
     
     render() {
         return (
-            <div className="row border m-0 p-0 h-100">
-               <div className="col-4 border">
+            <div className="row m-0 p-0 h-100">
+               <div className="col-4">
                    <Img src="./icon.png"/>
                </div>
-               <div className="col-8 border">
-                   Other
+               <div className="col-8">
+                   <ProductInfo />
                </div>
             </div>
         )

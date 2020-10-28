@@ -28,7 +28,7 @@ export default class Time extends Component {
 
     render() {
         return (
-            <span>{this.state.date.toLocaleTimeString()}</span>
+            <h5>{this.state.date.toLocaleTimeString().split(":")[0] + ":" + this.state.date.toLocaleTimeString().split(":")[1]}</h5>
         )
     }
 }

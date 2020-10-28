@@ -23,7 +23,7 @@ class barCode extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <input placeholder="ШК заказа/товара" className="form-control form-control-sm" onChange={this.onChange}></input>
+                    <input placeholder="ШК заказа/товара" className="form-control form-control-sm header-form-barcode" onChange={this.onChange}></input>
                 </form>
             </div>
         )

@@ -21,11 +21,15 @@ class fullName extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.onSubmit}>
-                    <input placeholder="Рабочее место, ФИО" className="form-control form-control-sm" onChange={this.onChange}></input>
-                </form>
+          <div className="row align-items-center">
+            <div className="col text-center">
+                <div className="row justify-content-center">
+                    <div className="col-8 rounded p-2 m-1">
+                      Рабочее место, ФИО
+                    </div>
+                </div>
             </div>
+          </div>
         )
     }
 }
