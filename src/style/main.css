@@ -1,3 +1,11 @@
 .main-product-amount {
     font-size: 4vw;
 }
+
+.main-product-line-font {
+    font-size: 2vw;
+}
+
+.main-product-line-bg-green {
+    background-color: rgba(50, 205, 50, 0.4);
+}

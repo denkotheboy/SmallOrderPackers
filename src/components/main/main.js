@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Img from "./img"
 import "../../style/main.css"
 import ProductInfo from "./productArea/productInformation"
+import DetailByCell from "./productArea/detailByCell"
 
 export default class Main extends Component {
     constructor(props){
@@ -19,7 +20,8 @@ export default class Main extends Component {
                    <Img src="./icon.png"/>
                </div>
                <div className="col-8">
-                   <ProductInfo />
+                   {/* <ProductInfo /> */}
+                    <DetailByCell />
                </div>
             </div>
         )
