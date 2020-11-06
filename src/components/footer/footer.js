@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ProductSticker from './productSticker'
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import Inventory from './inventory'
 import Cell from './cell'
 
@@ -13,10 +14,10 @@ export default class Footer extends Component {
                 <div className="col-8 text-center">
                     <div className="row">
                         <div className="col p-1">
-                            <Cell num="1"/>
+                            <Link to="/cell/1"><Cell num="1"/></Link>
                         </div>
                         <div className="col p-1">
-                            <Cell num="2"/>
+                            <Link to="/cell/2"><Cell num="2"/></Link>
                         </div>
                         <div className="col p-1">
                             <Cell num="3"/>

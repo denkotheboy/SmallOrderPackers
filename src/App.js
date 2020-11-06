@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router } from "react-router-dom";
 import './style/app.css';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -51,23 +52,25 @@ export default class App extends Component {
   render(){
     return (
       <Provider store={store}>
-        <div className="container-fluid">
-          <div className="row border-bottom border-dark header" id="header">
-            <div className="col m-0 p-0">
-              <Header />
+        <Router>
+          <div className="container-fluid">
+            <div className="row border-bottom border-dark header" id="header">
+              <div className="col m-0 p-0">
+                <Header />
+              </div>
+            </div>
+            <div className="row" id="main" style={this.state.style}>
+              <div className="col m-0 p-0 h-100">
+                <Main />
+              </div>
+            </div>
+            <div className="row border-top border-dark" id="footer">
+              <div className="col m-0 p-0">
+                <Footer />
+              </div>
             </div>
           </div>
-          <div className="row" id="main" style={this.state.style}>
-            <div className="col m-0 p-0 h-100">
-              <Main />
-            </div>
-          </div>
-          <div className="row border-top border-dark" id="footer">
-            <div className="col m-0 p-0">
-              <Footer />
-            </div>
-          </div>
-        </div>
+        </Router>
       </Provider>
     );
   }
