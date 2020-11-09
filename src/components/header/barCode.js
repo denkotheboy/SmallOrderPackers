@@ -36,8 +36,8 @@ export default connect(
     (dispatch) => ({
       sendBarcode: (barcode) => {
         dispatch({
-          type: "inputUserBarcode",
-          userBarCode: barcode
+          type: "inputBarcode",
+          BarCode: barcode
         });
       }
     })

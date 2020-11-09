@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
 import './style/app.css';
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -16,7 +16,9 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      style: null
+      style: null,
+      barCode: null,
+      redirect: false
     };
 
     this.header = null;
@@ -25,7 +27,10 @@ export default class App extends Component {
   }
 
   storeChange = () => {
-    console.log(store.getState().barCode);
+    this.setState({
+      barCode: store.getState().barCode,
+      redirect: true
+    });
   }
   
   componentDidMount() {
@@ -53,6 +58,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <Router>
+          {this.state.redirect ? <Redirect to={{pathname: "/product/"+this.state.barCode}} /> : null}
           <div className="container-fluid">
             <div className="row border-bottom border-dark header" id="header">
               <div className="col m-0 p-0">

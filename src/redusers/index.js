@@ -8,8 +8,8 @@ export default (state, action) => {
           page: action.page
         }
       };
-    } else if (action.type === "inputUserBarcode") {
-      return { ...state, userBarCode: action.userBarCode };
+    } else if (action.type === "inputBarcode") {
+      return { ...state, barCode: action.BarCode };
     }
     return state;
   };

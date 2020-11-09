@@ -12,8 +12,6 @@ export default class Main extends Component {
 
         };
     }
-
-    
     
     render() {
         return (
@@ -21,11 +19,20 @@ export default class Main extends Component {
                 <Route path="/cell/:id" render={(props) => (
                     <div className="row m-0 p-0 h-100">
                         <div className="col-4">
-                            <Img src="./icon.png"/>
+                            <Img src="./../icon.png"/>
                         </div>
                         <div className="col-8">
-                            {/* <ProductInfo /> */}
                             <DetailByCell {...props} />
+                        </div>
+                    </div>)}>
+                </Route>
+                <Route path="/product/:id" render={(props) => (
+                    <div className="row m-0 p-0 h-100">
+                        <div className="col-4">
+                            <Img src="./../icon.png"/>
+                        </div>
+                        <div className="col-8">
+                            <ProductInfo {...props}/>
                         </div>
                     </div>)}>
                 </Route>
