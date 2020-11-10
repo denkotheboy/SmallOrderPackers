@@ -16,16 +16,16 @@ export default class Main extends Component {
     render() {
         return (
             <Switch>
-                <div className="row m-0 p-0 h-100 border">
-                    <div className="col-4 border">
+                <div className="row m-0 p-0 h-100">
+                    <div className="col-4">
                         <Img src="./../icon.png"/>
                     </div>
-                    <div className="col-8 border">
+                    <div className="col-8">
                         <Route path="/product/:id" render={(props) => (
                             <ProductInfo {...props}/>)}>
                         </Route>
                         <Route path="/cell/:id" render={(props) => (
-                            <DetailByCell {...props}/>)}>
+                            <DetailByCell {...props} height={this.props.height} />)}>
                         </Route>
                     </div>
                 </div>

@@ -16,7 +16,8 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      style: null,
+      styleMain: null,
+      styleMainDetailByCell: null,
       barCode: null,
       redirect: false
     };
@@ -32,10 +33,8 @@ export default class App extends Component {
       redirect: true
     });
   }
-  
-  componentDidMount() {
-    this.store = store.subscribe(this.storeChange);
 
+  resize = () => {
     try {
       this.header = document.getElementById("header");
       this.main = document.getElementById("main");
@@ -48,10 +47,18 @@ export default class App extends Component {
 
     if (this.header !== null && this.main !== null && this.footer !== null){
       this.setState({
-        style: { height: Number(window.innerHeight - this.header.clientHeight - this.footer.clientHeight) - 10 }
+        styleMain: { height: Number(window.innerHeight - this.header.clientHeight - this.footer.clientHeight) - 10 },
+        styleMainDetailByCell: { height: Number(window.innerHeight - this.header.clientHeight - this.footer.clientHeight) - 44 }
       });
     }
-
+  }
+  
+  componentDidMount() {
+    this.store = store.subscribe(this.storeChange);
+    this.resize();
+    window.addEventListener(`resize`, event => {
+      this.resize();
+    }, false);
   }
 
   render(){
@@ -65,9 +72,9 @@ export default class App extends Component {
                 <Header />
               </div>
             </div>
-            <div className="row" id="main" style={this.state.style}>
+            <div className="row" id="main" style={this.state.styleMain}>
               <div className="col m-0 p-0 h-100">
-                <Main />
+                <Main height={this.state.styleMainDetailByCell}/>
               </div>
             </div>
             <div className="row border-top border-dark" id="footer">

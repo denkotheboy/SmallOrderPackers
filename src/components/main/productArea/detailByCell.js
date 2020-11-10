@@ -3,12 +3,20 @@ import ProductLine from "./productLine"
 import { useParams} from "react-router-dom";
 
 export default function(props) {
-    //console.log(props);
+    console.log(props);
     return (
         <div className="row h-100 pt-3 pb-3">
-            <div className="col-8 h-100 overflow-scroll">
+            <div className="col-8 overflow-auto scroll-hidden" style={props.height}>
                 <ProductLine selected={false} number={props.match.params.id}/>
                 <ProductLine selected={true} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
+                <ProductLine selected={false} number={props.match.params.id}/>
                 <ProductLine selected={false} number={props.match.params.id}/>
                 <ProductLine selected={false} number={props.match.params.id}/>
                 <ProductLine selected={false} number={props.match.params.id}/>
