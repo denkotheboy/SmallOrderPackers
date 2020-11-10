@@ -21,7 +21,7 @@ class exitOrСancel extends Component {
     render() {
         return (
             <div className="row h-100 align-items-center">
-                <div className="col h-75 text-center">
+                <div className="col h-75">
                   <form onSubmit={this.onSubmit} className="h-100">
                       <button type="submit" className="form-control btn btn-outline-danger h-100 w-75"><strong>Выход/Отмена</strong></button>
                   </form>

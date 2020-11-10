@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ProductSticker from './productSticker'
+import "../../style/footer.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Inventory from './inventory'

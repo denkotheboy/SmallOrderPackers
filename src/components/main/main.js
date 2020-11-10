@@ -16,26 +16,19 @@ export default class Main extends Component {
     render() {
         return (
             <Switch>
-                <Route path="/cell/:id" render={(props) => (
-                    <div className="row m-0 p-0 h-100">
-                        <div className="col-4">
-                            <Img src="./../icon.png"/>
-                        </div>
-                        <div className="col-8">
-                            <DetailByCell {...props} />
-                        </div>
-                    </div>)}>
-                </Route>
-                <Route path="/product/:id" render={(props) => (
-                    <div className="row m-0 p-0 h-100">
-                        <div className="col-4">
-                            <Img src="./../icon.png"/>
-                        </div>
-                        <div className="col-8">
-                            <ProductInfo {...props}/>
-                        </div>
-                    </div>)}>
-                </Route>
+                <div className="row m-0 p-0 h-100 border">
+                    <div className="col-4 border">
+                        <Img src="./../icon.png"/>
+                    </div>
+                    <div className="col-8 border">
+                        <Route path="/product/:id" render={(props) => (
+                            <ProductInfo {...props}/>)}>
+                        </Route>
+                        <Route path="/cell/:id" render={(props) => (
+                            <DetailByCell {...props}/>)}>
+                        </Route>
+                    </div>
+                </div>
             </Switch>
         )
     }

@@ -9,7 +9,7 @@ export default class Cell extends Component {
 
     render() {
         return (
-            <Link to={"/cell/"+this.props.num}><div className={this.props.selected === this.props.num ? "btn btn-outline-success active" : "btn btn-outline-secondary"} style={{minHeight: "90px", minWidth: "98%", fontSize: "3vw"}} disabled>{this.props.num}</div></Link>
+            <Link to={"/cell/"+this.props.num}><button type="button" className={"form-control btn " + (this.props.selected === this.props.num ? "btn-outline-success active" : "btn-outline-secondary")} style={{minHeight: "90px", minWidth: "98%"}}>{this.props.num}</button></Link>
         )
     }
 }

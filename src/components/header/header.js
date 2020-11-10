@@ -25,7 +25,7 @@ export default class header extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-2">
+                <div className="col-3">
                     <div className="row h-100 align-items-center">
                         <div className="col h-100">
                             <ExitOrCancel />
@@ -39,7 +39,7 @@ export default class header extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-3">
                     <div className="row h-100 align-items-center">
                         <div className="col text-center">
                             <Bid />
